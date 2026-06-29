@@ -37,7 +37,7 @@ export const experience: Job[] = [
   {
     company: "Uhurutek Solutions Ltd",
     role: "Software Engineer",
-    period: "Sept 2023 – Nov 2024",
+    period: "Aug 2023 – Nov 2023",
     location: "Dhaka, Bangladesh",
     points: [
       "Built secure RAG chatbots with LangChain and the OpenAI API, cutting customer-support response time by 50%.",
