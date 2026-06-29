@@ -26,7 +26,7 @@ export type Stat = { value: string; label: string };
 
 export const stats: Stat[] = [
   { value: "3+", label: "Years building backends" },
-  { value: "92%", label: "RAG retrieval accuracy" },
+  { value: "3 DCs", label: "HA payment cluster · auto-failover" },
   { value: "11th", label: "Worldwide, IRC 2023" },
   { value: "🥇", label: "AIUB Leadership Gold Medal" },
 ];
