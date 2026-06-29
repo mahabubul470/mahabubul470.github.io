@@ -1,0 +1,49 @@
+---
+import { site } from "../data/site";
+import Icon from "./Icon.astro";
+
+const socials = [
+  { name: "github", href: site.socials.github, label: "GitHub" },
+  { name: "linkedin", href: site.socials.linkedin, label: "LinkedIn" },
+  { name: "scholar", href: site.socials.scholar, label: "Google Scholar" },
+  { name: "leetcode", href: site.socials.leetcode, label: "LeetCode" },
+  { name: "codeforces", href: site.socials.codeforces, label: "Codeforces" },
+] as const;
+---
+
+<footer class="mx-auto max-w-5xl px-5 py-16 sm:px-6">
+  <div class="rounded-3xl border border-zinc-200 bg-gradient-to-br from-accent-500/5 to-transparent p-8 text-center sm:p-12 dark:border-zinc-800">
+    <h2 class="text-2xl font-bold tracking-tight text-zinc-900 sm:text-3xl dark:text-zinc-50">
+      Let's build something.
+    </h2>
+    <p class="mx-auto mt-3 max-w-md text-sm text-zinc-600 dark:text-zinc-400">
+      I'm open to backend and ML engineering roles, collaborations, and interesting problems.
+    </p>
+    <a
+      href={`mailto:${site.email}`}
+      class="mt-6 inline-flex items-center gap-2 rounded-lg bg-accent-600 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-accent-700"
+    >
+      <Icon name="mail" class="h-4 w-4" /> {site.email}
+    </a>
+
+    <div class="mt-7 flex justify-center gap-1">
+      {socials.map((s) => (
+        <a
+          href={s.href}
+          target="_blank"
+          rel="noopener"
+          aria-label={s.label}
+          title={s.label}
+          class="inline-flex h-9 w-9 items-center justify-center rounded-lg text-zinc-500 transition hover:bg-white hover:text-accent-600 dark:hover:bg-zinc-800 dark:hover:text-accent-400"
+        >
+          <Icon name={s.name} class="h-5 w-5" />
+        </a>
+      ))}
+    </div>
+  </div>
+
+  <div class="mt-8 flex flex-col items-center justify-between gap-2 text-xs text-zinc-500 sm:flex-row dark:text-zinc-500">
+    <p>© {new Date().getFullYear()} {site.name}.</p>
+    <p class="font-mono">Built with Astro + Tailwind CSS.</p>
+  </div>
+</footer>

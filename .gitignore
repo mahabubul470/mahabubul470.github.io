@@ -1,0 +1,17 @@
+# build output
+dist/
+.astro/
+
+# dependencies
+node_modules/
+
+# logs / env
+npm-debug.log*
+.env
+.env.production
+.DS_Store
+
+# local working files (not part of the site)
+_assets/
+_old_site/
+KNOWLEDGE_BASE.md
