@@ -1,5 +1,5 @@
 ---
-import { site, stats } from "../data/site";
+import { site } from "../data/site";
 import Icon from "./Icon.astro";
 
 const socials = [
@@ -108,19 +108,5 @@ const socials = [
         </div>
       </div>
     </div>
-
-    <!-- stats -->
-    <dl
-      class="reveal mt-14 grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-200 sm:grid-cols-3 dark:border-zinc-800 dark:bg-zinc-800"
-    >
-      {stats.map((s) => (
-        <div class="bg-white px-5 py-5 dark:bg-zinc-950">
-          <dt class="font-mono text-2xl font-semibold text-zinc-900 dark:text-zinc-100">
-            {s.value}
-          </dt>
-          <dd class="mt-1 text-sm text-zinc-500 dark:text-zinc-400">{s.label}</dd>
-        </div>
-      ))}
-    </dl>
   </div>
 </section>
